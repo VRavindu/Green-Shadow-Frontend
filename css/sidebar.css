@@ -50,8 +50,8 @@
   }
   
   .menu-item:hover {
-    background-color: #8ef067; /* Subtle background for hover */
-    border-radius: 50px; /* Rounded background */
+    background-color: #8ef067; 
+    border-radius: 50px; 
   }
   
   .menu-item:hover .icon {
@@ -69,13 +69,13 @@
     font-size: 25px;
     font-weight: bold;
     white-space: nowrap;
-    transition: all 0.3s ease-in-out; /* Smooth transition for animation */
+    transition: all 0.3s ease-in-out; 
   }
   
   .menu-item:hover .menu-name {
     opacity: 1;
-    transform: translateX(10px); /* Slide name in from the left */
-    margin-left: 10px; /* Space between icon and name */
+    transform: translateX(10px);
+    margin-left: 10px; 
   }
   
   .menu-link {
@@ -85,17 +85,47 @@
     text-decoration: none;
     color: inherit;
   }
-  
   .menu-link:hover {
     text-decoration: none;
   }
-  
   .current-item .menu-name {
     opacity: 1;
-    transform: translateX(10px); /* Slide name in from the left */
-    margin-left: 10px; /* Space between icon and name */
+    transform: translateX(10px); 
+    margin-left: 10px; 
   }
   .current-item {
-    background-color: #8ef067; /* Subtle background for hover */
-    border-radius: 50px; /* Rounded background */
+    background-color: #8ef067; 
+    border-radius: 50px; 
+  }
+
+  /* Main Content */
+  .main-content {
+    width: 80%;
+    padding: 50px;
+  }
+  
+  /* Content Header */
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .content-header h1 {
+    font-size: 40px;
+    color: #333;
+  }
+  .add-button {
+    background-color: #8ef067;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .add-button:hover {
+    background-color: #76c657;
   }
