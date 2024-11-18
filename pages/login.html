@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Registration</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section (Welcome and Image) -->
+    <div id="welcome-section" class="welcome-section">
+      <h1>Welcome to Green Shadow!</h1>
+      <img src="/assets/img/smart-farming.png" alt="Tractor and Field" id="main-image">
+    </div>
+    
+    <!-- Right Section (Forms) -->
+    <div id="form-section" class="form-section">
+      <!-- Login Form -->
+      <div id="login-form" class="form-container">
+        <h1>Sign In</h1>
+        <form>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password">
+          
+          <a href="#" class="forgot-password">Forgot Password?</a>
+          <button type="submit">LOGIN ➔</button>
+          <p>Don't have an Account? <a href="javascript:void(0);" onclick="toggleForms()">Sign Up</a></p>
+        </form>
+      </div>
+      
+      <!-- Registration Form -->
+      <div id="registration-form" class="form-container" style="display: none;">
+        <h1>Create Account</h1>
+        <form>
+          <label for="email">Email</label>
+          <input type="email" id="email-reg" placeholder="Enter your email">
+          
+          <label for="password">Password</label>
+          <input type="password" id="password-reg" placeholder="Enter your password">
+          
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm your password">
+
+          <label for="role">Select Your Role</label>
+          <select class="form-select" aria-label="Disabled select example">
+            <option selected>Select your Role </option>
+            <option value="1">ADMIN</option>
+            <option value="2">MANAGER</option>
+            <option value="3">SCIENTIST</option>
+            <option value="4">OTHER</option>
+          </select>
+
+          <button type="submit">REGISTER ➔</button>
+          <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForms()">Login</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>
