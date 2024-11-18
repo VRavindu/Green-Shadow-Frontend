@@ -1,0 +1,58 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ec;
+  padding: 60px 150px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 85vh;
+}
+
+/* Main Content */
+.main-content {
+  width: 80%;
+  padding: 50px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  color: #333;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.card {
+  background-color: #ccc;
+  height: 30vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

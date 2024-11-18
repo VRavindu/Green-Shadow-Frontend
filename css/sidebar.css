@@ -1,0 +1,101 @@
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #d9e8d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+  }
+  .logo img {
+    width: 30%;
+    margin-bottom: 50px;
+  }
+  
+  .menu {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-item .icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #e60404;
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .menu-item:hover {
+    background-color: #8ef067; /* Subtle background for hover */
+    border-radius: 50px; /* Rounded background */
+  }
+  
+  .menu-item:hover .icon {
+    transform: scale(1.1);
+  }
+  
+  .menu-item .menu-name {
+    display: inline-block;
+    margin-left: 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px; 
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out; /* Smooth transition for animation */
+  }
+  
+  .menu-item:hover .menu-name {
+    opacity: 1;
+    transform: translateX(10px); /* Slide name in from the left */
+    margin-left: 10px; /* Space between icon and name */
+  }
+  
+  .menu-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .menu-link:hover {
+    text-decoration: none;
+  }
+  
+  .current-item .menu-name {
+    opacity: 1;
+    transform: translateX(10px); /* Slide name in from the left */
+    margin-left: 10px; /* Space between icon and name */
+  }
+  .current-item {
+    background-color: #8ef067; /* Subtle background for hover */
+    border-radius: 50px; /* Rounded background */
+  }
