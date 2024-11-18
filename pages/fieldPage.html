@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/field.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+      
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="/assets/img/greenleaf-logo.png" alt="Logo">
+      </div>
+      <nav class="menu">
+        <div class="menu-item">
+          <a href="/pages/dashboard.html" class="menu-link">
+            <div class="icon">
+              <img src="/assets/icon/dashboard-one-is-filled.svg" alt="Home">
+            </div>
+            <span class="menu-name">Home</span>
+          </a>
+        </div>
+        <div class="menu-item current-item">
+          <a href="/pages/fieldPage.html" class="menu-link">
+            <div class="icon">
+              <img src="/assets/icon/farm.svg" alt="Field">
+            </div>
+            <span class="menu-name current-name">Field</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="/staff" class="menu-link">
+            <div class="icon">
+              <img src="/assets/icon/employee-solid.svg" alt="Staff">
+            </div>
+            <span class="menu-name">Staff</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="/vehicle" class="menu-link">
+            <div class="icon">
+              <img src="/assets/icon/semi-truck-vehicle-alt.svg" alt="Vehicle">
+            </div>
+            <span class="menu-name">Vehicle</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="/equipment" class="menu-link">
+            <div class="icon">
+              <img src="/assets/icon/tools.svg" alt="Equipment">
+            </div>
+            <span class="menu-name">Equipment</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="/crop" class="menu-link">
+            <div class="icon">
+              <img src="/assets/icon/seedling.svg" alt="Crop">
+            </div>
+            <span class="menu-name">Crop</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="/crop-details" class="menu-link">
+            <div class="icon">
+              <img src="/assets/icon/monitor-dashboard.svg" alt="Crop Details">
+            </div>
+            <span class="menu-name">Crop Details</span>
+          </a>
+        </div>
+      </nav>      
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="content-header">
+            <div class="search-container">
+              <input type="text" placeholder="Search..." class="search-bar">
+              <button class="search-btn">Search</button>
+            </div>
+            <button class="add-button">+ Add Field</button>
+          </header>
+          
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/img/field-img.jpg" alt="Field Image">
+            </div>
+            <div class="card-content">
+              <h2>Field 1</h2>
+              <p>Size: 10 Acres</p>
+              <p>Location: Location A</p>
+              <div class="card-actions">
+                <button class="action-btn view" title="View">
+                  <img src="/assets/icon/eye-password-show.svg" alt="View">
+                </button>
+                <button class="action-btn update" title="Update">
+                  <img src="/assets/icon/update.svg" alt="Update">
+                </button>
+                <button class="action-btn delete" title="Delete">
+                  <img src="/assets/icon/trash-delete-bin.svg" alt="Delete">
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </main>
+      
+  </div>
+</body>
+</html>
