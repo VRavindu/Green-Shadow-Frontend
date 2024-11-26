@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #c3ffa5 !important;
+    padding: 60px 150px;
+  }
+  /* Container */
+  .container-main {
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 85vh;
+  }
+  /* Cards Container */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+  .card {
+    background-color: #ccc;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  .card-content {
+    padding: 15px;
+    text-align: center;
+  }
+  .card-content h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .card-content p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  .card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .action-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .action-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  .action-btn:hover {
+    transform: scale(1.2);
+  }
+  .action-btn.update img {
+    filter: invert(65%) sepia(74%) saturate(665%) hue-rotate(180deg) brightness(90%) contrast(84%);
+  }
+  .action-btn.delete img {
+    filter: invert(55%) sepia(78%) saturate(647%) hue-rotate(350deg) brightness(85%) contrast(85%);
+  }
+  /* Content Header */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Bar Container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .search-bar {
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 20vw;
+    transition: border-color 0.3s;
+  }
+  .search-bar:focus {
+    border-color: #8ef067;
+    outline: none;
+  }
+  .search-btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #8ef067;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .search-btn:hover {
+    background-color: #76c657;
+  }

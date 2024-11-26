@@ -90,8 +90,8 @@
   }
   .current-item .menu-name {
     opacity: 1;
-    transform: translateX(10px); 
-    margin-left: 10px; 
+    transform: translateX(1px); 
+    margin-left: 1px;
   }
   .current-item {
     background-color: #8ef067; 
