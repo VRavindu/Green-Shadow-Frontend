@@ -73,8 +73,8 @@
           </a>
         </div>
       </nav>      
-  </aside>
-  <main class="main-content">
+    </aside>
+    <main class="main-content">
       <header class="content-header">
           <h1>Vehicles</h1>
           <div class="search-container">
@@ -120,6 +120,52 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Vehicle Modal -->
+  <div class="modal fade" id="addVehicleModal" tabindex="-1" aria-labelledby="addVehicleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addVehicleModalLabel">Add Vehicle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addVehicleForm">
+            <div class="mb-3">
+              <label for="vehicleCode" class="form-label">Vehicle Code</label>
+              <input type="text" class="form-control" id="vehicleCode" required>
+            </div>
+            <div class="mb-3">
+              <label for="plateNo" class="form-label">Plate No</label>
+              <input type="text" class="form-control" id="plateNo" required>
+            </div>
+            <div class="mb-3">
+              <label for="vehicleCategory" class="form-label">Category</label>
+              <input type="text" class="form-control" id="vehicleCategory" required>
+            </div>
+            <div class="mb-3">
+              <label for="fuelType" class="form-label">Fuel Type</label>
+              <input type="text" class="form-control" id="fuelType" required>
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select class="form-select" id="status" required>
+                <option value="" selected disabled>Select Status</option>
+                <option value="Available">Available</option>
+                <option value="In Use">In Use</option>
+                <option value="Under Maintenance">Under Maintenance</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="remarks" class="form-label">Remarks</label>
+              <textarea class="form-control" id="remarks" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Vehicle</button>
+          </form>
         </div>
       </div>
     </div>

@@ -126,6 +126,46 @@
     </div>
   </div>
 
+  <!-- Modal for Adding Equipment -->
+  <div class="modal fade" id="addEquipmentModal" tabindex="-1" aria-labelledby="addEquipmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addEquipmentModalLabel">Add New Equipment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addEquipmentForm">
+            <div class="mb-3">
+              <label for="equipmentId" class="form-label">ID</label>
+              <input type="text" class="form-control" id="equipmentId" required>
+            </div>
+            <div class="mb-3">
+              <label for="equipmentName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="equipmentName" required>
+            </div>
+            <div class="mb-3">
+              <label for="equipmentType" class="form-label">Type</label>
+              <input type="text" class="form-control" id="equipmentType" required>
+            </div>
+            <div class="mb-3">
+              <label for="equipmentStatus" class="form-label">Status</label>
+              <input type="text" class="form-control" id="equipmentStatus" required>
+            </div>
+            <div class="mb-3">
+              <label for="equipmentDetails" class="form-label">Details</label>
+              <textarea class="form-control" id="equipmentDetails" required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveEquipmentButton">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/model/equipment.js"></script>
 </body>

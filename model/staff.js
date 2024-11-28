@@ -42,14 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
             role: "HR",
             address: ["789 Oak Avenue", "Building 3", "Downtown", "State", "Country"]
         }
-        
     ];
 
     staffData.forEach(staff => {
         const row = document.createElement("tr");
         row.classList.add("staff-row");
         row.setAttribute("data-id", staff.id);
-
         row.innerHTML = `
             <td>${staff.id}</td>
             <td>${staff.firstName} ${staff.lastName}</td>
@@ -67,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </td>
         `;
 
-        // Add row click event for modal
         row.addEventListener("click", () => {
             document.getElementById("modalId").textContent = staff.id;
             document.getElementById("modalFirstName").textContent = staff.firstName;
@@ -91,16 +88,15 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.show();
         });
 
-        // Stop row click event for buttons
         const updateButton = row.querySelector(".update");
         updateButton.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent modal trigger
+            e.stopPropagation(); 
             alert(`Update staff with ID: ${staff.id}`);
         });
 
         const deleteButton = row.querySelector(".delete");
         deleteButton.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent modal trigger
+            e.stopPropagation(); 
             const confirmDelete = confirm(`Are you sure you want to delete staff with ID: ${staff.id}?`);
             if (confirmDelete) {
                 alert(`Staff with ID: ${staff.id} has been deleted.`);
@@ -110,3 +106,54 @@ document.addEventListener("DOMContentLoaded", () => {
         staffTableBody.appendChild(row);
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const addStaffModal = new bootstrap.Modal(document.getElementById("addStaffModal"));
+    const staffTableBody = document.getElementById("staffTableBody");
+  
+    const addStaffButton = document.querySelector(".add-button");
+    addStaffButton.addEventListener("click", () => {
+      document.getElementById("addStaffForm").reset();
+      addStaffModal.show();
+    });
+  
+    const saveStaffButton = document.getElementById("saveStaffButton");
+    saveStaffButton.addEventListener("click", () => {
+      const staffId = document.getElementById("staffId").value.trim();
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const designation = document.getElementById("designation").value.trim();
+      const gender = document.getElementById("gender").value;
+      const joinedDate = document.getElementById("joinedDate").value;
+      const dob = document.getElementById("dob").value;
+      const contactNo = document.getElementById("contactNo").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const role = document.getElementById("role").value;
+      const address1 = document.getElementById("address1").value.trim();
+      const address2 = document.getElementById("address2").value.trim();
+      const address3 = document.getElementById("address3").value.trim();
+      const address4 = document.getElementById("address4").value.trim();
+      const address5 = document.getElementById("address5").value.trim();
+  
+      if (!staffId || !firstName || !lastName || !designation || !gender || !joinedDate || !dob || !contactNo || !email || !role || !address1 || !address2 || !address3 || !address4 || !address5) {
+        alert("Please fill all fields!");
+        return;
+      }
+        const newRow = document.createElement("tr");
+      newRow.innerHTML = `
+        <td>${staffId}</td>
+        <td>${firstName} ${lastName}</td>
+        <td>${address1}, ${address2}, ${address3}, ${address4}, ${address5}</td>
+        <td>${contactNo}</td>
+        <td>${role}</td>
+        <td>${gender}</td>
+        <td>
+          <button class="btn btn-info view-btn">View</button>
+          <button class="btn btn-warning edit-btn">Edit</button>
+          <button class="btn btn-danger delete-btn">Delete</button>
+        </td>
+      `;
+    staffTableBody.appendChild(newRow);
+    addStaffModal.hide();
+    });
+  });
+  

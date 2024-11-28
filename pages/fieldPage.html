@@ -83,7 +83,7 @@
               <input type="text" placeholder="Search..." class="search-bar">
               <button class="search-btn">Search</button>
             </div>
-            <button class="add-button">+ Add Field</button>
+            <button class="add-button" data-bs-toggle="modal" data-bs-target="#addFieldModal">+ Add Field</button>
           </header>
 
       <div class="cards-container" id="cardsContainer">
@@ -91,6 +91,7 @@
     </main>
   </div>
 
+  <!-- Modal for Field Details -->
   <div class="modal fade" id="fieldDetailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -108,6 +109,50 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Adding Field -->
+  <div class="modal fade" id="addFieldModal" tabindex="-1" aria-labelledby="addFieldModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addFieldModalLabel">Add Field</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addFieldForm">
+            <div class="mb-3">
+              <label for="fieldCode" class="form-label">Field Code</label>
+              <input type="text" class="form-control" id="fieldCode" required>
+            </div>
+            <div class="mb-3">
+              <label for="fieldName" class="form-label">Field Name</label>
+              <input type="text" class="form-control" id="fieldName" required>
+            </div>
+            <div class="mb-3">
+              <label for="fieldLocation" class="form-label">Location</label>
+              <input type="text" class="form-control" id="fieldLocation" required>
+            </div>
+            <div class="mb-3">
+              <label for="fieldSize" class="form-label">Size</label>
+              <input type="text" class="form-control" id="fieldSize" required>
+            </div>
+            <div class="mb-3">
+              <label for="fieldImage1" class="form-label">Field Image 1</label>
+              <input type="file" class="form-control" id="fieldImage1" accept="image/*">
+            </div>
+            <div class="mb-3">
+              <label for="fieldImage2" class="form-label">Field Image 2</label>
+              <input type="file" class="form-control" id="fieldImage2" accept="image/*">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" id="saveFieldButton">Save</button>
         </div>
       </div>
     </div>
