@@ -19,7 +19,7 @@
       <!-- Login Form -->
       <div id="login-form" class="form-container">
         <h1>Sign In</h1>
-        <form>
+        <div class="form">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="Enter your email">
           
@@ -27,9 +27,9 @@
           <input type="password" id="password" placeholder="Enter your password">
           
           <a href="#" class="forgot-password">Forgot Password?</a>
-          <button type="submit">LOGIN ➔</button>
+          <button type="submit" id="login-btn">LOGIN ➔</button>
           <p>Don't have an Account? <a href="javascript:void(0);" onclick="toggleForms()">Sign Up</a></p>
-        </form>
+        </div>
       </div>
       
       <!-- Registration Form -->
@@ -48,10 +48,10 @@
           <label for="role">Select Your Role</label>
           <select class="form-select" aria-label="Disabled select example">
             <option selected>Select your Role </option>
-            <option value="1">ADMIN</option>
-            <option value="2">MANAGER</option>
-            <option value="3">SCIENTIST</option>
-            <option value="4">OTHER</option>
+            <option value="ADMIN">ADMIN</option>
+            <option value="MANAGER">MANAGER</option>
+            <option value="SCIENTIST">SCIENTIST</option>
+            <option value="OTHER">OTHER</option>
           </select>
 
           <button type="submit">REGISTER ➔</button>
@@ -62,5 +62,11 @@
   </div>
 
   <script src="/js/login.js"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/controller/loginController.js" type="module"></script>
 </body>
 </html>
