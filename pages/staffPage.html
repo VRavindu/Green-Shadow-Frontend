@@ -112,8 +112,7 @@
                 </div>
                 <div class="modal-body">
                     <p><strong>ID:</strong> <span id="modalId"></span></p>
-                    <p><strong>First Name:</strong> <span id="modalFirstName"></span></p>
-                    <p><strong>Last Name:</strong> <span id="modalLastName"></span></p>
+                    <p><strong>Full Name:</strong> <span id="modalFullName"></span></p>
                     <p><strong>Designation:</strong> <span id="modalDesignation"></span></p>
                     <p><strong>Gender:</strong> <span id="modalGender"></span></p>
                     <p><strong>Joined Date:</strong> <span id="modalJoinedDate"></span></p>
@@ -144,8 +143,100 @@
                           <!-- Left Column -->
                           <div class="col-md-4">
                               <div class="mb-3">
+                                  <label for="firstName" class="form-label">First Name</label>
+                                  <input type="text" id="firstName" class="form-control" placeholder="Enter First Name" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="lastName" class="form-label">Last Name</label>
+                                  <input type="text" id="lastName" class="form-control" placeholder="Enter Last Name" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="dob" class="form-label">Date of Birth</label>
+                                  <input type="date" id="dob" class="form-control" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label">Gender</label>
+                                  <select id="gender" class="form-select" required>
+                                      <option value="">Select Gender</option>
+                                      <option value="MALE">Male</option>
+                                      <option value="FEMALE">Female</option>
+                                  </select>
+                              </div>
+                              <div class="mb-3">
+                                    <label for="contactNo" class="form-label">Contact No</label>
+                                    <input type="tel" id="contactNo" class="form-control" placeholder="Enter Contact Number" required>
+                               </div>
+                          </div>
+                          <!-- Center Column -->
+                          <div class="col-md-4">
+                              <div class="mb-3">
+                                  <label for="email" class="form-label">Email</label>
+                                  <input type="email" id="email" class="form-control" placeholder="Enter Email Address" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="joinedDate" class="form-label">Joined Date</label>
+                                  <input type="date" id="joinedDate" class="form-control" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="designation" class="form-label">Designation</label>
+                                  <input type="text" id="designation" class="form-control" placeholder="Enter Designation" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="role" class="form-label">Role</label>
+                                  <select id="role" class="form-select" required>
+                                      <option value="">Select Role</option>
+                                      <option value="ADMINISTRATIVE">Admin</option>
+                                      <option value="MANAGER">Manager</option>
+                                      <option value="OTHER">Other</option>
+                                      <option value="SCIENTIST">Scientist</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <!-- Right Column -->
+                          <div class="col-md-4">
+                              <div class="mb-3">
+                                  <label for="addressLine1" class="form-label">Address Line 1</label>
+                                  <input type="text" id="addressLine1" class="form-control" placeholder="Enter Address Line 1" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="addressLine2" class="form-label">Address Line 2</label>
+                                  <input type="text" id="addressLine2" class="form-control" placeholder="Enter Address Line 2">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="addressLine3" class="form-label">Address Line 3</label>
+                                  <input type="text" id="addressLine3" class="form-control" placeholder="Enter Address Line 3">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="addressLine4" class="form-label">Address Line 4</label>
+                                  <input type="text" id="addressLine4" class="form-control" placeholder="Enter Address Line 4">
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary" form="addStaffForm" id="save-btn">Save Staff</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Update Staff Modal -->
+    <div class="modal fade" id="updateStaffModal" tabindex="-1" aria-labelledby="updateStaffModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="updateStaffModalTitle">Update Staff Member</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="addStaffForm">
+                      <div class="row">
+                          <!-- Left Column -->
+                          <div class="col-md-4">
+                              <div class="mb-3">
                                   <label for="staffId" class="form-label">ID</label>
-                                  <input type="text" id="staffId" class="form-control" placeholder="Enter Staff ID" required>
+                                  <input type="text" id="staffId" class="form-control" placeholder="Enter Staff ID" >
                               </div>
                               <div class="mb-3">
                                   <label for="firstName" class="form-label">First Name</label>
@@ -163,9 +254,8 @@
                                   <label class="form-label">Gender</label>
                                   <select id="gender" class="form-select" required>
                                       <option value="">Select Gender</option>
-                                      <option value="Male">Male</option>
-                                      <option value="Female">Female</option>
-                                      <option value="Other">Other</option>
+                                      <option value="MALE">Male</option>
+                                      <option value="FEMALE">Female</option>
                                   </select>
                               </div>
                           </div>
@@ -192,9 +282,10 @@
                                   <label for="role" class="form-label">Role</label>
                                   <select id="role" class="form-select" required>
                                       <option value="">Select Role</option>
-                                      <option value="Admin">Admin</option>
-                                      <option value="Manager">Manager</option>
-                                      <option value="Worker">Worker</option>
+                                      <option value="ADMINISTRATIVE">Admin</option>
+                                      <option value="MANAGER">Manager</option>
+                                      <option value="OTHER">Other</option>
+                                      <option value="SCIENTIST">Scientist</option>
                                   </select>
                               </div>
                           </div>
@@ -217,17 +308,13 @@
                                   <label for="addressLine4" class="form-label">Address Line 4</label>
                                   <input type="text" id="addressLine4" class="form-control" placeholder="Enter Address Line 4">
                               </div>
-                              <div class="mb-3">
-                                  <label for="addressLine5" class="form-label">Address Line 5</label>
-                                  <input type="text" id="addressLine5" class="form-control" placeholder="Enter Address Line 5">
-                              </div>
                           </div>
                       </div>
                   </form>
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" form="addStaffForm">Save Staff</button>
+                  <button type="submit" class="btn btn-primary" form="addStaffForm" id="update-btn">Save Staff</button>
               </div>
           </div>
       </div>
