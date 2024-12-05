@@ -23,109 +23,111 @@
     align-items: flex-start;
   }
   
-  .menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .menu-item .icon {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: #e60404;
-  }
-  
-  .menu-item img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .menu-item:hover {
-    background-color: #8ef067; 
-    border-radius: 50px; 
-  }
-  
-  .menu-item:hover .icon {
-    transform: scale(1.1);
-  }
-  
-  .menu-item .menu-name {
-    display: inline-block;
-    margin-left: 0;
-    opacity: 0;
-    transform: translateX(-20px);
-    color: #333;
-    padding: 5px 10px;
-    border-radius: 20px; 
-    font-size: 25px;
-    font-weight: bold;
-    white-space: nowrap;
-    transition: all 0.3s ease-in-out; 
-  }
-  
-  .menu-item:hover .menu-name {
-    opacity: 1;
-    transform: translateX(10px);
-    margin-left: 10px; 
-  }
-  
-  .menu-link {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    text-decoration: none;
-    color: inherit;
-  }
-  .menu-link:hover {
-    text-decoration: none;
-  }
-  .current-item .menu-name {
-    opacity: 1;
-    transform: translateX(1px); 
-    margin-left: 1px;
-  }
-  .current-item {
-    background-color: #8ef067; 
-    border-radius: 50px; 
-  }
+  /* Menu item container */
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-  /* Main Content */
-  .main-content {
-    width: 80%;
-    padding: 50px;
-  }
+/* Icon styles */
+.menu-item .icon {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #e60404; /* Color for icon */
+}
+
+/* Menu name styles (text next to icon) */
+.menu-item .menu-name {
+  display: inline-block;
+  margin-left: 10px;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Prevent layout shifting */
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+  background-color: #8ef067; /* Highlight on hover */
+  border-radius: 50px;
+}
+
+/* Scale icon slightly on hover */
+.menu-item:hover .icon {
+  transform: scale(1.1);
+}
+
+.menu-item:hover .menu-name {
+  opacity: 1; /* Make text visible */
+  visibility: visible; /* Allow visibility */
+  transform: translateX(10px); /* Slide in effect */
+  transition: opacity 0.3s ease-in-out, visibility 0s 0s, transform 0.3s ease-in-out;
+}
+
   
-  /* Content Header */
-  .content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .content-header h1 {
-    font-size: 40px;
-    color: #333;
-  }
-  .add-button {
-    background-color: #8ef067;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .add-button:hover {
-    background-color: #76c657;
-  }
+.menu-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.menu-link:hover {
+  text-decoration: none;
+}
+.current-item .menu-name {
+  opacity: 1;
+  transform: translateX(10px); 
+  margin-left: 1px;
+  visibility: inherit;
+}
+.current-item {
+  background-color: #8ef067; 
+  border-radius: 50px; 
+}
+
+/* Main Content */
+.main-content {
+  width: 80%;
+  padding: 50px;
+}
+
+/* Content Header */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content-header h1 {
+  font-size: 40px;
+  color: #333;
+}
+.add-button {
+  background-color: #8ef067;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-button:hover {
+  background-color: #76c657;
+}

@@ -9,6 +9,11 @@
 </head>
 <body>
   <div class="container">
+    <!-- Logout Button -->
+    <button class="logout-button" onclick="handleLogout()">
+      <img src="/assets/icon/alternate-sign-out.svg" alt="Logout Icon">
+      <span class="logout-text">Logout</span>
+    </button>
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo">
@@ -91,5 +96,11 @@
       </div>
     </main>
   </div>
+  <script>
+    function handleLogout() {
+      alert("Logging out...");
+      window.location.href = "/pages/login.html"; // Redirect to login page
+    }
+  </script>
 </body>
 </html>

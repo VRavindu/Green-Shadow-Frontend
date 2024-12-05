@@ -20,6 +20,41 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 85vh;
+  position: relative;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #a5a5a5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.logout-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.logout-button .logout-text {
+  display: none;
+}
+
+.logout-button:hover .logout-text {
+  display: inline-block;
+}
+
+.logout-button:hover {
+  background-color: #f38989;
 }
 
 /* Cards */
@@ -40,4 +75,54 @@ body {
   height: 30vh;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles for Tablet */
+@media (max-width: 1024px) {
+  /* Adjust the container layout for tablet screens */
+  .container {
+    flex-direction: column;  /* Stack the sidebar and content vertically */
+    height: auto; /* Allow content to expand vertically */
+  }
+
+  /* Adjust the position of the logout button for tablet */
+  .logout-button {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;  /* Make button padding smaller */
+  }
+
+  /* Make the card grid single-column on tablets */
+  .cards {
+    grid-template-columns: 1fr; /* Make cards stack in one column */
+    gap: 20px;  /* Reduce gap between cards */
+  }
+
+  /* Adjust the card size on tablet */
+  .card {
+    height: 25vh;  /* Adjust card height */
+  }
+}
+
+@media (max-width: 768px) {
+  .logout-button {
+    padding: 6px 12px;  /* Smaller padding */
+  }
+
+  .logout-button img {
+    width: 18px;  /* Smaller icon */
+    height: 18px;
+  }
+
+  .cards {
+    gap: 15px;
+  }
+
+  .card {
+    height: 20vh;  /* Even smaller card height */
+  }
+
+  body {
+    padding: 40px 20px;  /* Reduce padding for smaller devices */
+  }
 }
