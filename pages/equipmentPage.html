@@ -117,7 +117,6 @@
           <p><strong>Name:</strong> <span id="modalName"></span></p>
           <p><strong>Type:</strong> <span id="modalType"></span></p>
           <p><strong>Status:</strong> <span id="modalStatus"></span></p>
-          <p><strong>Details:</strong> <span id="modalDetails"></span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -137,10 +136,6 @@
         <div class="modal-body">
           <form id="addEquipmentForm">
             <div class="mb-3">
-              <label for="equipmentId" class="form-label">ID</label>
-              <input type="text" class="form-control" id="equipmentId" required>
-            </div>
-            <div class="mb-3">
               <label for="equipmentName" class="form-label">Name</label>
               <input type="text" class="form-control" id="equipmentName" required>
             </div>
@@ -152,15 +147,53 @@
               <label for="equipmentStatus" class="form-label">Status</label>
               <input type="text" class="form-control" id="equipmentStatus" required>
             </div>
-            <div class="mb-3">
-              <label for="equipmentDetails" class="form-label">Details</label>
-              <textarea class="form-control" id="equipmentDetails" required></textarea>
-            </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" id="saveEquipmentButton">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Update Equipment -->
+  <div class="modal fade" id="updateEquipmentModal" tabindex="-1" aria-labelledby="updateEquipmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addEquipmentModalLabel">Update Equipment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addEquipmentForm">
+            <div class="mb-3">
+              <label for="equipmentName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="updateEquipmentName" required>
+            </div>
+            <div class="mb-3">
+              <label for="equipmentType" class="form-label">Type</label>
+              <input type="text" class="form-control" id="updateEquipmentType" required>
+            </div>
+            <div class="mb-3">
+              <label for="equipmentStatus" class="form-label">Status</label>
+              <input type="text" class="form-control" id="updateEquipmentStatus" required>
+            </div>
+            <div class="mb-3">
+              <label for="staffId" class="form-label">Staff ID</label>
+              <select class="form-control" id="staffIdSelector" required>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="fieldCodeSelector" class="form-label">Field Code</label>
+              <select id="fieldCodeSelector" class="form-control" required>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="updateEquipmentButton">Save</button>
         </div>
       </div>
     </div>
