@@ -38,13 +38,13 @@ export function saveField(fieldData) {
   return new Promise((resolve, reject) => {
 
       $.ajax({
-        url: "http://localhost:5055/cropmonitoringsystem/api/v1/field", // Ensure this is the correct API endpoint
+        url: "http://localhost:5055/cropmonitoringsystem/api/v1/field", 
         type: "POST",
-        data: fieldData,  // Pass the FormData object
-        processData: false,  // Don't process the data
-        contentType: false,  // Don't set content-type header for file uploads
+        data: fieldData,  
+        processData: false,
+        contentType: false,  
         headers: {
-            Authorization: "Bearer " + getCookie("authToken"),  // Include Authorization header
+            Authorization: "Bearer " + getCookie("authToken"),  
         },
         success: (response) => {
           alert("Field saved successfully")
@@ -96,4 +96,21 @@ export function deleteField(fieldId) {
           },
       });
   });
+}
+export function getFieldCodes() {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: "http://localhost:5055/cropmonitoringsystem/api/v1/field",
+            type: "GET",
+            headers: {
+                Authorization: "Bearer " + getCookie("authToken"),
+            },
+            success: function (response) {
+                resolve(response); 
+            },
+            error: function (xhr, status, error) {
+                reject(error);
+            },
+        });
+    });
 }

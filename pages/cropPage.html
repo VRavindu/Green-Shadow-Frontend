@@ -102,10 +102,6 @@
         <div class="modal-body">
           <form id="addCropForm">
             <div class="mb-3">
-              <label for="cropCode" class="form-label">Crop Code</label>
-              <input type="text" class="form-control" id="cropCode" required>
-            </div>
-            <div class="mb-3">
               <label for="commonName" class="form-label">Common Name</label>
               <input type="text" class="form-control" id="commonName" required>
             </div>
@@ -124,6 +120,11 @@
             <div class="mb-3">
               <label for="season" class="form-label">Season</label>
               <input type="text" class="form-control" id="season" required>
+            </div>
+            <div class="mb-3">
+              <label for="fieldCodeSelector" class="form-label">Field Code</label>
+              <select id="fieldCodeSelector" class="form-control" required>
+              </select>
             </div>
             <button type="submit" class="btn btn-primary" id="saveCropButton">Save Crop</button>
           </form>
