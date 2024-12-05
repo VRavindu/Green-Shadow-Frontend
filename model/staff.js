@@ -61,18 +61,17 @@ return new Promise((resolve, reject) => {
 export function update(staffId, updatedStaff) {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `http://localhost:5055/cropmonitoringsystem/api/v1/staff/${staffId}`, // URL with staffId
-            type: "PATCH", // PUT request for updating
+            url: `http://localhost:5055/cropmonitoringsystem/api/v1/staff/${staffId}`, 
             contentType: "application/json",
-            data: JSON.stringify(updatedStaff), // Send the updated staff data
+            data: JSON.stringify(updatedStaff), 
             headers: {
-                Authorization: "Bearer " + getCookie("authToken"), // Include authorization header
+                Authorization: "Bearer " + getCookie("authToken"), 
             },
             success: (response) => {
-                resolve(response); // Resolve promise on success
+                resolve(response);
             },
             error: (error) => {
-                reject(error); // Reject promise on error
+                reject(error); 
             }
         });
     });
@@ -81,17 +80,35 @@ export function update(staffId, updatedStaff) {
 export function deleteStaff(staffId) {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `http://localhost:5055/cropmonitoringsystem/api/v1/staff/${staffId}`, // URL with staffId
-            type: "DELETE", // DELETE request for deletion
+            url: `http://localhost:5055/cropmonitoringsystem/api/v1/staff/${staffId}`, 
+            type: "DELETE", 
             headers: {
-                Authorization: "Bearer " + getCookie("authToken"), // Include authorization header
+                Authorization: "Bearer " + getCookie("authToken"),
             },
             success: (response) => {
-                resolve(response); // Resolve promise on success
+                resolve(response); 
             },
             error: (error) => {
-                reject(error); // Reject promise on error
+                reject(error); 
             }
         });
     });
 }
+export function getStaffIds() {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: "http://localhost:5055/cropmonitoringsystem/api/v1/staff",
+        type: "GET",
+        headers: {
+          Authorization: "Bearer " + getCookie("authToken"),
+        },
+        success: function (response) {
+          resolve(response);
+        },
+        error: function (xhr, status, error) {
+          reject(error);
+        },
+      });
+    });
+  }
+  

@@ -104,7 +104,7 @@
           <p><strong>ID:</strong> <span id="modalId"></span></p>
           <p><strong>Log Date:</strong> <span id="modalDate"></span></p>
           <p><strong>Log Details:</strong> <span id="modalDetails"></span></p>
-          <p><strong>Season:</strong> <span id="modalSeason"></span></p>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -124,33 +124,31 @@
         <div class="modal-body">
           <form id="addLogForm">
             <div class="mb-3">
-              <label for="logId" class="form-label">ID</label>
-              <input type="text" class="form-control" id="logId" required>
-            </div>
-            <div class="mb-3">
-              <label for="logDate" class="form-label">Log Date</label>
-              <input type="date" class="form-control" id="logDate" required>
-            </div>
-            <div class="mb-3">
               <label for="logDetails" class="form-label">Log Details</label>
-              <textarea class="form-control" id="logDetails" rows="3" required></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="logSeason" class="form-label">Season</label>
-              <select class="form-control" id="logSeason" required>
-                <option value="Monsoon">Monsoon</option>
-                <option value="Spring">Spring</option>
-                <option value="Winter">Winter</option>
-                <option value="Autumn">Autumn</option>
-              </select>
+              <input type="text" class="form-control" id="logDetails" required>
             </div>
             <div class="mb-3">
               <label for="logImage" class="form-label">Log Image</label>
               <input type="file" class="form-control" id="logImage" accept="image/*">
             </div>
+            <div class="mb-3">
+              <label for="cropCode" class="form-label">Crop Code</label>
+              <select class="form-control" id="cropCodeSelector" required>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="staffId" class="form-label">Staff ID</label>
+              <select class="form-control" id="staffIdSelector" required>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="fieldCodeSelector" class="form-label">Field Code</label>
+              <select id="fieldCodeSelector" class="form-control" required>
+              </select>
+            </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Add Log</button>
+              <button type="submit" class="btn btn-primary" id="saveCropDetailsButton">Add Log</button>
             </div>
           </form>
         </div>
